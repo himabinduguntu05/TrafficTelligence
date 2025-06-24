@@ -1,0 +1,8 @@
+Flask
+pandas
+numpy
+scikit-learn
+joblib       # If you used joblib to save model or scaler
+matplotlib   # For plotting (optional)
+seaborn      # For heatmaps etc. (optional)
+
