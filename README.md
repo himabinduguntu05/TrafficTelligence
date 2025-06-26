@@ -45,8 +45,26 @@ cd your-repo-name/Flask
 ### 2.Install Dependencies
 
 pip install -r requirements.txt
-### 3.Run th App
-python app.py
+## 🚀 How to Run This Project
+
+1. **Train the Model and Generate Required Files**
+
+   Run the notebook `traffic_volume.ipynb` to train the model and generate the necessary `.pkl` files:
+
+   - `traffic_volume_model.pkl`
+   - `scaler.pkl`
+   - `encoder.pkl` (if label encoding is used)
+
+   These files are saved in the `Flask/` directory and are required for the Flask app to function.
+
+2. **Run the Flask Web Application**
+
+   After generating the `.pkl` files, run the Flask app:
+
+   ```bash
+   cd Flask
+   python app.py
+
 
 
 🌐 Usage
