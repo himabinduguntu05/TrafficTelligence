@@ -1,1 +1,160 @@
-<!--make it responsive and make the form center aligned,pick the high resolution traffic related backgrounds-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Traffic Volume Estimation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes it responsive -->
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("https://img.freepik.com/premium-photo/aienhanced-urban-traffic-management-system-city-traffic-control-center-using-ai-manage-traffic-flow_1230253-19172.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .login {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 600px;
+            margin: 40px auto;
+            width: 90%;
+        }
+
+        h1, h3 {
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+        }
+
+        button {
+            margin-top: 25px;
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            border: none;
+            color: white;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Responsive Typography */
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+
+            .login {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 22px;
+            }
+
+            h3 {
+                font-size: 16px;
+            }
+
+            input, select, button {
+                font-size: 14px;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login">
+        <h1>Traffic Volume Estimation</h1>
+        <form action="result.html" method="get">
+            <h3>Please enter the following details:</h3>
+
+            <label for="holiday">Holiday:</label>
+            <select name="holiday" required>
+                <option value="None">None</option>
+                <option value="Columbus Day">Columbus Day</option>
+                <option value="Veterans Day">Veterans Day</option>
+                <option value="Thanksgiving Day">Thanksgiving Day</option>
+                <option value="Christmas Day">Christmas Day</option>
+                <option value="New Years Day">New Years Day</option>
+                <option value="Martin Luther King Jr Day">Martin Luther King Jr Day</option>
+                <option value="Presidents Day">Presidents Day</option>
+                <option value="Memorial Day">Memorial Day</option>
+                <option value="Independence Day">Independence Day</option>
+                <option value="State Fair">State Fair</option>
+                <option value="Labor Day">Labor Day</option>
+            </select>
+
+            <label>Temperature (°C):</label>
+            <input type="number" name="temp" step="0.1" required>
+
+            <label>Rain (mm):</label>
+            <input type="number" name="rain" min="0" step="0.1" required>
+
+            <label>Snow (mm):</label>
+            <input type="number" name="snow" min="0" step="0.1" required>
+
+            <label>Weather:</label>
+            <select name="weather" required>
+                <option value="1">Clouds</option>
+                <option value="2">Clear</option>
+                <option value="3">Rain</option>
+                <option value="4">Drizzle</option>
+                <option value="5">Mist</option>
+                <option value="6">Haze</option>
+                <option value="7">Fog</option>
+                <option value="8">Thunderstorm</option>
+                <option value="9">Snow</option>
+                <option value="10">Squall</option>
+                <option value="11">Smoke</option>
+            </select>
+
+            <label>Year:</label>
+            <input type="number" name="year" min="2012" max="2222" required>
+
+            <label>Month:</label>
+            <input type="number" name="month" min="1" max="12" required>
+
+            <label>Day:</label>
+            <input type="number" name="day" min="1" max="31" required>
+
+            <label>Hours:</label>
+            <input type="number" name="hours" min="0" max="23" required>
+
+            <label>Minutes:</label>
+            <input type="number" name="minutes" min="0" max="59" required>
+
+            <label>Seconds:</label>
+            <input type="number" name="seconds" min="0" max="59" required>
+
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
