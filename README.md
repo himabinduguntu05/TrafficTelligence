@@ -62,7 +62,7 @@ pip install -r requirements.txt
    After generating the `.pkl` files, run the Flask app:
 
    ```bash
-   cd Flask
+   cd Project_Files/Flask
    python app.py
 
 

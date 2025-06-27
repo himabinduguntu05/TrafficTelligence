@@ -6,12 +6,12 @@ import pickle
 import os
 # Initialize Flask app
 app = Flask(__name__)
-model=pickle.load(open('/home/ghima/Desktop/Traffic_Telligence/Flask/traffic_volume_model.pkl', 'rb'))
+model=pickle.load(open('/home/ghima/Desktop/Traffic_Telligence/Project_Files/Flask/traffic_volume_model.pkl', 'rb'))
 # Load encoders and scaler
-with open("/home/ghima/Desktop/Traffic_Telligence/Flask/encoder.pkl", "rb") as f:
+with open("/home/ghima/Desktop/Traffic_Telligence/Project_Files/Flask/encoder.pkl", "rb") as f:
     label_encoders = pickle.load(f)
 
-with open("/home/ghima/Desktop/Traffic_Telligence/Flask/scaler.pkl", "rb") as f:
+with open("/home/ghima/Desktop/Traffic_Telligence/Project_Files/Flask/scaler.pkl", "rb") as f:
     scaler = pickle.load(f)
 
 #rendering the home page
